@@ -1,0 +1,35 @@
+<div class="container">
+  <table  class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th >Name</th>
+        <th >Price</th>
+
+        <th > 24H Lowest</th>
+        <th >24H Highest</th>
+        <th>Volume</th>
+
+      </tr>
+    </thead>
+    <tbody id="rowZoom">
+
+
+
+        <tr (click)="openCoinById(row)"  *ngFor="let row of trendingData">
+
+          <td><img height="40px" width="40px" id="coinImg" src="{{row.image}}" alt="">{{row.name}}</td>
+          <td>{{row.current_price}}</td>
+          <td>{{row.low_24h}}</td>
+          <td>{{row.high_24h}}</td>
+          <td>{{row.total_volume}}</td>
+        </tr>
+
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+

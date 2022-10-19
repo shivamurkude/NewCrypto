@@ -1,0 +1,19 @@
+<p>
+  <mat-toolbar>
+    <span routerLink=""  >Crypto</span>
+    <span routerLink="trending"  >Trending</span>
+
+
+  <span class="example-spacer"></span>
+  <mat-form-field>
+
+    <mat-select (valueChange)="sendCurrency($event)" [(ngModel)]="selectedCurrency">
+      <mat-option class="text-sm" selected value="INR">INR</mat-option>
+
+      <mat-option class="text-sm" value="USDT">USDT</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-toolbar>
+</p>
+
+<router-outlet></router-outlet>
